@@ -497,7 +497,7 @@
 			</div>
 
 			<div class="col-md-12 text-center wow fadeInUp">
-				<a href="#" class="btn btn-primary feature">我是VIP, 现在登录系统</a>
+				<a href="/me" class="btn btn-primary feature">我是VIP, 现在登录系统</a>
 			</div>
 		</div> <!-- row end -->
 	</div> <!-- container end -->
