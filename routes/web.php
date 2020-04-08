@@ -13,12 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-
+Route::get('/', 'HomeController@index');
+Route::get('/news', 'HomeController@news');
 
 Route::get('/login', 'UserController@login');
 Route::get('/logout', 'UserController@logout');
 Route::post('/check', 'UserController@check');
-Route::get('/products', 'ProductController@index');
+
+
+Route::group(['middleware' => ['state_check']], function () {
+
+    Route::get('/products', 'ProductController@index');
+    Route::get('/me', 'UserController@me');
+
+});
+
+
+Route::get('/test', function () {
+    // session('big', "fuck");
+    // Session::put('big', 'fuck');
+    echo session('big');
+});
+

@@ -60,7 +60,7 @@
 
 				<div class="col-md-4 col-sm-4 wow slideInDown">
 					<div class="top-contact">
-                        <h4><i class="icon-key"></i> 产品管理</h4>
+                        <h4><i class="icon-key"></i> 用户中心</h4>
                         @auth
                         <p>尊敬的贵宾 {{ Auth::user()->name }}, 欢迎您使用圣义产品管理系统, 我们将竭诚为您提供更优质的服务!</p>
                         <a class="btn btn-primary white" href="/products">新品推荐</a>

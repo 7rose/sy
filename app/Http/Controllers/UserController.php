@@ -7,6 +7,7 @@ use App\Forms\LoginForm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 use Kris\LaravelFormBuilder\FormBuilderTrait;
 
 class UserController extends Controller
@@ -56,35 +57,18 @@ class UserController extends Controller
         if(!$ck) return redirect()->back()->withErrors(['password'=>'密码错误!'])->withInput();
         Auth::login($re->first());
 
-        return redirect('/');
+        $destination = Session::has('destination') ? Session::get('destination') : '/me';
+
+        return redirect($destination);
     }
 
-    // /**
-    // * 保存
-    // *
-    // */
-    // public function contactStore(Request $request)
-    // {
-    //     $array = [
-
-    //         'salutation' => $request->salutation,
-    //         'first_name' => $request->first_name,
-    //         'last_name' => $request->last_name,
-    //         'company' => $request->company,
-    //         'street' => $request->street,
-    //         'city' => $request->city,
-    //         'country' => $request->country,
-    //         'phone' => $request->phone,
-
-    //     ];
-
-    //     Auth::user()->update(['contact_verified_at' => now(), 'info->contact' => json_encode($array)]);
-
-    //     $path = '/';
-
-    //     if(Session::has('target_url')) $path = session('target_url');
-    //     Session::forget('target_url');
-
-    //     return redirect($path);
-    // }
+    /**
+     * 用户中心
+     *
+     */
+    public function me(Request $request)
+    {
+        echo session('destination');
+        // echo $request->fullUrl();
+    }
 }

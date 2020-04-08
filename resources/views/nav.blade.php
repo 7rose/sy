@@ -56,7 +56,8 @@
 					<div class="collapse navbar-collapse  navbar-main-collapse">
 						<ul class="nav navbar-nav">
 							<li class="active"><a href="/"  >首页</a></li>
-							<li><a class="page-scroll" href="/news" >最新消息</a></li>
+                            <li><a class="page-scroll" href="/news" >最新消息</a></li>
+                            <li><a class="page-scroll" href="/products">产品业务</a></li>
                             <li><a class="page-scroll" href="/#section-contact-info"  >联系我们</a></li>
                             @auth
                             <li>
@@ -79,14 +80,13 @@
                                         <li class="divider"></li>
                                         <li>
                                             <a role="menuitem" class="dmenu" tabindex="-1" href="/users"><span class="fa fa-user" aria-hidden="true"></span> 用户管理</a>
-                                            <a role="menuitem" class="dmenu" tabindex="-1" href="/users"><span class="fa fa-cubes" aria-hidden="true"></span> 产品管理</a>
                                             <a role="menuitem" class="dmenu" tabindex="-1" href="/logout"><span class="fa fa-power-off" aria-hidden="true"></span> 安全退出</a>
                                         </li>
                                     </ul>
                                 </div>
                             </li>
                             @else
-							<li><a class="page-scroll" href="/login" > 登录系统</a></li>
+							<li><a class="page-scroll" href="/me" > 用户中心</a></li>
                             @endauth
 						</ul>
 						<div class="contact-no navbar-right visible-md visible-lg">
