@@ -26,12 +26,16 @@ Route::group(['middleware' => ['state_check']], function () {
     Route::get('/products', 'ProductController@index');
     Route::get('/me', 'UserController@me');
 
+    Route::get('/cash', 'HomeController@cash');
+    Route::get('/income', 'HomeController@income');
+
 });
 
 
-Route::get('/test', function () {
-    // session('big', "fuck");
-    // Session::put('big', 'fuck');
-    echo session('big');
-});
+// Route::get('/test', function () {
+//     // session('big', "fuck");
+//     // Session::put('big', 'fuck');
+//     echo Str::random(32);
+//     // echo session('big');
+// });
 

@@ -72,14 +72,14 @@
                                             <a role="menuitem" class="dmenu" tabindex="-1" href="/products"><span class="fa fa-diamond" aria-hidden="true"></span>  产品推荐</a>
                                         </li>
                                         <li>
-                                            <a role="menuitem" class="dmenu" tabindex="-1" href="/finance"> <span class="fa fa-jpy" aria-hidden="true"></span> 出金入金</a>
+                                            <a role="menuitem" class="dmenu" tabindex="-1" href="/cash"> <span class="fa fa-jpy" aria-hidden="true"></span> 出金入金</a>
                                         </li>
                                         <li>
-                                            <a role="menuitem" class="dmenu" tabindex="-1" href="/benifit"><span class="fa fa-bar-chart" aria-hidden="true"></span> 收益流水</a>
+                                            <a role="menuitem" class="dmenu" tabindex="-1" href="/income"><span class="fa fa-bar-chart" aria-hidden="true"></span> 收益流水</a>
                                         </li>
                                         <li class="divider"></li>
                                         <li>
-                                            <a role="menuitem" class="dmenu" tabindex="-1" href="/users"><span class="fa fa-user" aria-hidden="true"></span> 用户管理</a>
+                                            <a role="menuitem" class="dmenu" tabindex="-1" href="/me"><span class="fa fa-user" aria-hidden="true"></span> {{ Auth::user()->name }}</a>
                                             <a role="menuitem" class="dmenu" tabindex="-1" href="/logout"><span class="fa fa-power-off" aria-hidden="true"></span> 安全退出</a>
                                         </li>
                                     </ul>

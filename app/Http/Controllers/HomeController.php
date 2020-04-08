@@ -24,4 +24,22 @@ class HomeController extends Controller
         return view('news');
     }
 
+    /**
+     * 新闻
+     *
+     */
+    public function cash()
+    {
+        return view('cash');
+    }
+
+    /**
+     * 新闻
+     *
+     */
+    public function income()
+    {
+        return view('income');
+    }
+
 }

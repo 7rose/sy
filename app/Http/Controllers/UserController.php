@@ -68,7 +68,8 @@ class UserController extends Controller
      */
     public function me(Request $request)
     {
-        echo session('destination');
+        return view('me');
+        // echo session('destination');
         // echo $request->fullUrl();
     }
 }
