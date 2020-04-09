@@ -15,7 +15,7 @@
                                 <h2 class="big-title wow slideInLeft">{{ Auth::user()->name }}</h2>
                                     <p><span class="fa fa-phone" aria-hidden="true"></span> {{ Auth::user()->mobile }}</p>
                                     <p class="wow slideInRight">欢迎您使用本系统!</p>
-                                    <a href="/products" class="btn btn-primary white">产品</a>
+                                    <a href="/products" class="btn btn-primary white"><span class="fa fa-diamond" aria-hidden="true"></span> 产品</a>
                                 </div>
                             </div> <!-- item end -->
                         </div>
